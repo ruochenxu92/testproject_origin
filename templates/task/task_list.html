@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Task</h1>
+    {{ objects }}
+    {% for task in object_list %}
+        <li><a href="/descriptions/{{task.name }}">{{ task.id  }}_______{{ task.name }}</a></li>
+    {% endfor %}
+
+    bug report should be task name
+</body>
+</html>

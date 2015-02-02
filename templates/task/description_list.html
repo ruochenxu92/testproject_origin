@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Descriptions</h1>
+    <h1>{{ name.name }}</h1>
+
+    {% for desp in object_list %}
+       <li> <h2>{{ desp.content }}</h2></li>
+    {% endfor %}
+</body>
+</html>
