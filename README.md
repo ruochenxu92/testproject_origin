@@ -27,20 +27,14 @@ Open the VCS and check out from github project
 
 
 5. Everyone would better his own branches and to do his own functions. 
-6. 
+End==============================
 
-
-
-
-
-
-
-git commands
-
-git add *
-git clone https://github.com/xxu46/testproject
-git commit -m "message"
-git remote add pb https://github.com/xxu46/testproject
-git push -f pb master
+Useful notes
+6. git commands
+7. git add *
+8. git clone https://github.com/xxu46/testproject
+9. git commit -m "message"
+10. git remote add pb https://github.com/xxu46/testproject
+11. git push -f pb master
 
 rm -rf foldername
