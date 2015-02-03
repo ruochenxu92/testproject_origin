@@ -4,7 +4,7 @@ All rights reserved
 
     Steps 
 1.  Course Propursal
-2.  
+2.  front end bootstrap http://wsnippets.com/responsive-airbnb-style-search-box-twitter-bootstrap/
 3. 
 4. 
 
