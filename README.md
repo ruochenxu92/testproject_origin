@@ -25,4 +25,22 @@ Open the VCS and check out from github project
 
 4. Commit your changes also use VCS   (command + k)
 
+
 5. Everyone would better his own branches and to do his own functions. 
+6. 
+
+
+
+
+
+
+
+git commands
+
+git add *
+git clone https://github.com/xxu46/testproject
+git commit -m "message"
+git remote add pb https://github.com/xxu46/testproject
+git push -f pb master
+
+rm -rf foldername
