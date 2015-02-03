@@ -30,6 +30,9 @@ Open the VCS and check out from github project
 End==============================
 
 Useful notes
+
+steps
+
 6. git commands
 7. git add *
 8. git clone https://github.com/xxu46/testproject
