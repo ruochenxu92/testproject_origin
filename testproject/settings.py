@@ -88,3 +88,13 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     os.path.join(BASE_DIR,  'task/templates'),
 )
+
+
+
+WHOOSH_INDEX = os.path.join(BASE_DIR, 'whoosh/')
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE':'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': WHOOSH_INDEX,
+    }
+}
