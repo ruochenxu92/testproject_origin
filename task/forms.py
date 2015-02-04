@@ -7,3 +7,4 @@ class ContactForm(forms.Form):
     def send_email(self):
         pass
 
+

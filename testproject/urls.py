@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
 from task import views
+
 
 urlpatterns = patterns('',
     #match list page with rule books, and will pass keyword args to views functions
@@ -12,5 +12,13 @@ urlpatterns = patterns('',
     url(r'^tasksCreate/$', views.TaskCreate.as_view()),
     url(r'^tasksContact/$', views.ContactView.as_view()),
     (r'^descriptions/([\w-]+)/$', views.ListDescriptionView.as_view()),
+
+
+    # url(r'^search/', include('haystack.urls')),
+    #
+    #
+    # url(r'^all/$', views.ListArticles.as_view()),
+    #
+    # url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
 )
 

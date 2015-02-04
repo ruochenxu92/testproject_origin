@@ -12,3 +12,7 @@ class  Description(models.Model):
 
     def __unicode__(self):
         return self.taskName
+
+class Article(models.Model):
+    title = models.CharField(max_length=40)
+    body = models.TextField()
