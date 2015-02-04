@@ -27,4 +27,5 @@ class AnimalTestCase(TestCase):
         article2 = Article(title='Facebook', body='Facebook is one the best company in the world')
         article2.save()
         article3 = Article(title='Dropbox', body='Dropbox is one the best company in the world')
+
         article3.save()
