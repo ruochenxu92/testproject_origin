@@ -48,20 +48,33 @@ class ListDescriptionView(ListView):
     #     context = super(ListTasksView,self).get_context_data(kwargs)
     #     context['name'] = Task.objects.filter(name=kwargs)
     #     return context
-
-
-from haystack.query import SearchQuerySet
-
-def search_titles(request):
-    tasks = SearchQuerySet().autocomplete(content_auto=request.POST.get('search_text'), '')
-
-    return render_to_response('ajax_search.html', {'tasks', tasks})
-
-
-
+#
+#
+# from haystack.query import SearchQuerySet
+#
+# def search_titles(request):
+#     tasks = SearchQuerySet().autocomplete(content_auto=request.POST.get('search_text'), '')
+#
+#     return render_to_response('ajax_search.html', {'tasks', tasks})
+#
+#
+# #
 class ListArticles(ListView):
     model = Article
+    queryset = Article.objects.all()
+
 
 
 def article(request, article_id = 1):
     return render_to_response('article.html', {'article': Article.objects.get(id=article_id)})
+
+
+def search_titles(request):
+    if request.method == 'POST':
+        search_text = request.POST['search_text']
+    else:
+        search_text = ''
+
+    articles = Article.objects.filter(title_contains=search_text)
+    return render_to_response('ajax_search.html', {'articles': articles})
+

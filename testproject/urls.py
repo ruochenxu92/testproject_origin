@@ -12,13 +12,13 @@ urlpatterns = patterns('',
     url(r'^tasksCreate/$', views.TaskCreate.as_view()),
     url(r'^tasksContact/$', views.ContactView.as_view()),
     (r'^descriptions/([\w-]+)/$', views.ListDescriptionView.as_view()),
-
-
+    #
+    #
     # url(r'^search/', include('haystack.urls')),
     #
     #
-    # url(r'^all/$', views.ListArticles.as_view()),
-    #
-    # url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
+    url(r'^all/$', views.ListArticles.as_view()),
+
+    url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
 )
 

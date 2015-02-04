@@ -16,3 +16,5 @@ class  Description(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=40)
     body = models.TextField()
+    pub_date = models.DateTimeField("date published")
+    likes = models.IntegerField()

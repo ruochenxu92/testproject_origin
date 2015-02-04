@@ -1,8 +1,5 @@
-{% if tasks.count > 0 %}
-
-{% for task in tasks %}
-    <li><a href="{{ task.object.get_absolute_url }}">{{ task.object.title }}</a></li>
-{% endfor %}
-{% else %}
-<li>None to show</li>
+{% if articles.count > 0 %} {% for article in articles %}
+{{ article.object.title }}
+{% endfor %} {% else %}
+None to show!
 {% endif %}
