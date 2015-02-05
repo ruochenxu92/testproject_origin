@@ -40,4 +40,50 @@ steps
 10. git remote add pb https://github.com/xxu46/testproject
 11. git push -f pb master
 
+
+
+Search Engine (build Index(haystack(2.4.0.dev) and Index search(Whoosh(2.5.7))
+url = http://django-haystack.readthedocs.org/en/latest/tutorial.html
+1. pip install -e git+https://github.com/toastdriven/django-haystack.git@master#egg=django-haystack    (2.4.0 dev)
+2.
+    setting.py
+    import os
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+            'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+        },
+    }
+ 
+3. templates/indexes/task/note_text.txt
+    {{ object.title }}
+    {{ object.user.get_full_name }}
+    {{ object.body }}
+4. urls
+    (r'^search/', include('haystack.urls')),
+
+5.  ./manage.py rebuild_index
+6.  Add Haystack To INSTALLED_APPS
+As with most Django applications, you should add Haystack to the INSTALLED_APPS within your settings file (usually settings.py).
+
+Example:
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+
+    # Added.
+    'haystack',
+
+    # Then your usual apps...
+    'blog',
+]
+
+
+========================================
+
+
 rm -rf foldername
