@@ -31,6 +31,15 @@ STATICFILES_FINDERS = (
 
 
 
+import os
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -55,6 +64,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Added.
+    'haystack',
+
     'task',
 )
 
@@ -105,11 +117,6 @@ TEMPLATE_DIRS = (
 )
 
 
-#
-# WHOOSH_INDEX = os.path.join(BASE_DIR, 'whoosh/')
-# HAYSTACK_CONNECTIONS = {
-#     'default': {
-#         'ENGINE':'haystack.backends.whoosh_backend.WhooshEngine',
-#         'PATH': WHOOSH_INDEX,
-#     }
-# }
+
+
+

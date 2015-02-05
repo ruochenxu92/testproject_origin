@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from task import views
-
+import haystack
+haystack.autodiscover()
 
 urlpatterns = patterns('',
     #match list page with rule books, and will pass keyword args to views functions
@@ -15,8 +16,9 @@ urlpatterns = patterns('',
     #
     #
     # url(r'^search/', include('haystack.urls')),
-    #
-    #
+(r'^search/', include('haystack.urls')),
+
+    # url(r'^search/', include('haystack.urls')),
     url(r'^all/$', views.ListArticles.as_view()),
 
     url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
