@@ -5,8 +5,15 @@
     <title></title>
 </head>
 <body>
+
+
+
+
     <h1>{{ article.title }}</h1>
     <p>{{ article.body }}</p>
+    <p>{{ article.likes }} Likes</p>
+    <p><a href="/like/{{ article.id }}">Like</a></p>
+
 
 
 
@@ -17,10 +24,6 @@
 
 
     </ul>
-
-
-
-
 
 
 </body>

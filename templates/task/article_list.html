@@ -7,6 +7,17 @@
     <title></title>
 </head>
 <body>
+
+
+
+    <ul>
+        <li><a href="/all">Articles</a></li>
+        <li><a href="/create"> create article</a></li>
+
+    </ul>
+
+
+
     <h1>Articles</h1>
     {% for article in object_list %}
         <li><h2><a href="../get/{{ article.id }}">{{ article.title }}</a></h2></li>

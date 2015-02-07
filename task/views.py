@@ -1,10 +1,14 @@
+from django.core.context_processors import csrf
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, render_to_response
+from django.template import RequestContext
 from django.views.generic import ListView, CreateView, FormView, UpdateView, DeleteView
 from task.models import Task, Description
 from django.core.urlresolvers import reverse
-
-from .forms import ContactForm
+from django.contrib import auth
+from .forms import ContactForm, MyRegistrationForm, ArticleForm
 from .models import Article
+from django.contrib import messages
 
 class TaskUpdate(UpdateView):
     model = Task
@@ -57,8 +61,9 @@ class ListDescriptionView(ListView):
 #
 #     return render_to_response('ajax_search.html', {'tasks', tasks})
 #
-#
-# #
+
+
+
 class ListArticles(ListView):
     model = Article
     queryset = Article.objects.all()
@@ -77,4 +82,78 @@ def search_titles(request):
 
     articles = Article.objects.filter(title_contains=search_text)
     return render_to_response('ajax_search.html', {'articles': articles})
+
+
+def login(request):
+    c = {}
+    c.update(csrf(request))
+    return render_to_response('login.html', c)
+
+
+def auth_view(request):
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=username, password=password)
+    if user is not None:
+        auth.login(request, user)
+        return HttpResponseRedirect('/accounts/loggedin')
+    else:
+        return HttpResponseRedirect('/accounts/invalid')
+
+
+def loggedin(request):
+    full_name = request.user.username
+    return render_to_response('loggedin.html',
+                             locals(),context_instance=RequestContext(request))
+
+def invalid_login(request):
+    return render_to_response('invalid_login.html')
+
+def logout(request):
+    auth.logout(request)
+    return render_to_response('logout.html')
+
+def register_user(request):
+    if request.method == 'POST':
+        form = MyRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/accounts/register_success')
+    else:
+        form = MyRegistrationForm()
+        args = {}
+        args.update(csrf(request))
+        args['form'] = form
+        return render_to_response('register.html', args)
+
+
+def register_success(request):
+    return render_to_response('register_success.html')
+
+
+
+def create(request):
+    if request.POST:
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, "You Article was added")
+            return HttpResponseRedirect('/all')
+    else:
+        form = ArticleForm()
+        args = {}
+        args.update(csrf(request))
+        args['form'] = form
+        return render_to_response('create_article.html', args)
+
+
+
+def like_article(request, article_id):
+    if article_id:
+        a = Article.objects.get(id=article_id)
+        a.likes += 1
+        a.save()
+
+    return HttpResponseRedirect('../../get/%s' % article_id)
+
 
