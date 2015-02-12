@@ -7,7 +7,7 @@ class Task (models.Model):
     def __unicode__(self):
         return self.name
 
-class  Description(models.Model):
+class Description(models.Model):
     taskName = models.ForeignKey(Task)
     content = models.TextField()
 
@@ -27,7 +27,6 @@ class Article(models.Model):
 from django.db import models
 from django.contrib.auth.models import User
 
-
 class Note(models.Model):
     #user = models.ForeignKey(User)
     pub_date = models.DateTimeField()
@@ -36,3 +35,8 @@ class Note(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=32)
+
