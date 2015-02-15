@@ -1,9 +1,4 @@
 __author__ = 'Xiaomin'
-
-
-
-
-
 # import scrapy
 #
 #

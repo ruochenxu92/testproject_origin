@@ -28,13 +28,14 @@ class ExampleSpider(BaseSpider):
 
         url = response.xpath("//a[contains(@href, 'user')]/@href").extract()[0]
         url = self.hostname + url
-        return scrapy.Request(url, callback=self.parseHomePage)
+        print(url)
+        #return scrapy.Request(url, callback=self.parseHomePage)
 
          #   //*[@id="extDirectoryPerson1"]/div[3]
 
 
-    def parseHomePage(self,response):
-        url = response.xpath('//*[@id="gsc_a_ta"]/a/text()').extract()[0]
-        return ArticleItem(title=url, body=url, likes =1, pub_date='2001-1-1')
+    # def parseHomePage(self,response):
+    #     url = response.xpath('//*[@id="gsc_a_ta"]/a/text()').extract()[0]
+    #     return ArticleItem(title=url, body=url, likes =1, pub_date='2001-1-1')
 
 
