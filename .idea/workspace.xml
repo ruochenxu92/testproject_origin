@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c88f70e8-68e4-492f-9997-1f2d9165ae9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/DBSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/BasicGroupSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/BasicGroupSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/ExampleSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/ExampleSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/GroupSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/GroupSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/MovieSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/MovieSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/RealSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/RealSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/download60htmlFile.py" afterPath="$PROJECT_DIR$/tutorial/download60htmlFile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testproject/settings.py" afterPath="$PROJECT_DIR$/testproject/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/test_read.py" afterPath="$PROJECT_DIR$/tutorial/test_read.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/tutorialSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/tutorialSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/wiki_spider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/wiki_spider.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testproject.iws" />
@@ -58,6 +48,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testproject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.83370286" vertical-offset="1259" max-vertical-offset="1725">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExampleSpider.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/ExampleSpider.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pipelines.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23281597" vertical-offset="0" max-vertical-offset="840">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="840">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#189#246#0" expanded="true" />
               </folding>
@@ -191,7 +191,6 @@
         <option value="$PROJECT_DIR$/tutorial/download60htmlFile.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/items.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/GroupSpider.py" />
-        <option value="$PROJECT_DIR$/testproject/settings.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/BasicGroupSpider.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/ExampleSpider.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/MovieSpider.py" />
@@ -204,6 +203,7 @@
         <option value="$PROJECT_DIR$/tutorial/db.log" />
         <option value="dbtable:/bc711935/bad8ca4e-88dc-4900-8eb0-34f29664068b/..task_interest" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" />
+        <option value="$PROJECT_DIR$/testproject/settings.py" />
       </list>
     </option>
   </component>
@@ -730,7 +730,11 @@
       <created>1424018952480</created>
       <updated>1424018952480</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="commit finish Interest">
+      <created>1424038615162</created>
+      <updated>1424038615162</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -807,7 +811,8 @@
     <MESSAGE value="crawl the imdb web page and store data in items.jsom" />
     <MESSAGE value="commit before setup mysql for django" />
     <MESSAGE value="cancel setup mysql and get all urls of google scholar.&#10;Now we can write codes and insert into database" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancel setup mysql and get all urls of google scholar.&#10;Now we can write codes and insert into database" />
+    <MESSAGE value="commit finish Interest" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit finish Interest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1254,14 +1259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testproject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6278626" vertical-offset="1186" max-vertical-offset="1710">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testproject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -1392,11 +1389,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23281597" vertical-offset="0" max-vertical-offset="840">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="840">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#189#246#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testproject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83370286" vertical-offset="1259" max-vertical-offset="1725">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
