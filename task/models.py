@@ -86,7 +86,7 @@ class Author(models.Model):
 
     class Meta:
         ordering = ('field',)
-        
+
 
 
 class Paper(models.Model):

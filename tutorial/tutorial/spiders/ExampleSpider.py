@@ -40,3 +40,12 @@ class ExampleSpider(BaseSpider):
         #  t_pub_date = response.xpath('//*[@id="gsc_table"]/div[2]/div[2]/text()').extract()[0]
         #  t_body = response.xpath('//*[@id="gsc_descr"]/text()').extract()[0]
         #email = response.xpath("//*[contains(text(),'.edu')]").extract()[0]
+
+
+
+
+
+
+
+
+
