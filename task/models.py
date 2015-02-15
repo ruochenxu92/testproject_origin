@@ -58,6 +58,9 @@ class Field(models.Model):
     def __unicode__(self):
         return smart_unicode(self.name)
 
+    class Meta:
+        ordering = ('name',)
+
 
 class Interest(models.Model):
     name = models.CharField(max_length=80)
@@ -66,17 +69,23 @@ class Interest(models.Model):
     def __unicode__(self):
         return smart_unicode(self.name)
 
+    class Meta:
+        ordering = ('name',)
+
 
 class Author(models.Model):
     name = models.CharField(max_length=80)
     #coauthors = models.ForeignKey()
-    institution = models.CharField(max_length=80)
+    institutions = models.CharField(max_length=80, null=True)
     field = models.ForeignKey(Field)
     interest = models.ManyToManyField(Interest)
-    authorUrl = models.CharField(max_length=200)
+    authorUrl = models.CharField(max_length=200, null=True)
 
     def __unicode__(self):
         return smart_unicode(self.name)
+
+    class Meta:
+        ordering = ('field',)
 
 
 class Paper(models.Model):
@@ -89,6 +98,21 @@ class Paper(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.title)
+
+
+    class Meta:
+        ordering = ('title',)
+# from task.models import Field, Interest, Author, Paper
+# f = Field.objects.filter(pk=1)[0]
+# i = Interest.objects.filter(pk=1)[0]
+# author = Author(name='Manoj Prabhakaran',institutions='Computer Science, University of Illinois Urbana-Champaign',field=f,authorUrl='http://web.engr.illinois.edu/~mmp/')
+
+
+
+
+
+
+
 
 
 

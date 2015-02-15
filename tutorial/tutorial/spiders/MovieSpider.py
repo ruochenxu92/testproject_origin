@@ -31,18 +31,16 @@ class MovieSpider(BaseSpider):
 
     def getBasicInfo(self, response):
         item = response.meta['item']
-
         item['Director'] = response.xpath('//*[@id="overview-top"]/div[4]/a/span/text()').extract()
         item['Writers']  = response.xpath('//*[@id="overview-top"]/div[5]/a/span/text()').extract()
         item['Sinopsis'] = response.xpath('//*[@id="titleStoryLine"]/div[1]/p/text()').extract()[0]
         item['Genres'] = response.xpath('//*[@id="titleStoryLine"]/div[4]/a/text()').extract()
         item['MapRating'] = response.xpath('//*[@id="titleStoryLine"]/div[5]/span[1]/text()').extract()[0]
-
         return item
 
 
-
-
-
-
-
+    def ifNotEmptyGetIndex(self, item, index = 0):
+		if item: #check to see it's not empty
+			return item[index]
+		else:
+			return item
