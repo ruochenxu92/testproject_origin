@@ -9,6 +9,9 @@ def getListOfProfessors():
     listOfProfessors = f.read().split('\n')
     return listOfProfessors
 
+
+ # self.file = open('items.json', 'wb')
+ #        self.file.write('[')
 def getStartUrls():
     prefix = 'https://scholar.google.com/scholar?q='
     suffix = '&btnG=&hl=en&as_sdt=0%2C14'

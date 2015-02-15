@@ -2,12 +2,16 @@ import mechanize
 import cookielib
 import time
 import os
+import json
 
-path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/google1.txt")
-f = open(path)
-listOfP = f.read().split('\n')
+path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/items.json")
+json_data=open(path).read()
+data = json.loads(json_data)
+
+
+
 i = 0
-for url in listOfP:
+for url in data:
     cj = cookielib.LWPCookieJar()
     br = mechanize.Browser()
     br.set_cookiejar(cj)
@@ -20,13 +24,17 @@ for url in listOfP:
     br.set_debug_http(True)
     br.set_debug_redirects(True)
     br.set_debug_responses(True)
-    br.open("https://scholar.google.com/citations?user=FANRIhwAAAAJ&hl=en&oi=ao")
-    file = open('scholargoogle.html', 'wb')
+    br.open(url['name'])
     st = br.response().read()
-    print st
+    print len(st)
+
+    #filename = url['name'].split('?q=')[1].split('&btn')[0]
+
+    file = open(str(i) + '.html', 'wb')
     file.write(st)
     file.close()
-    #filename = url.split('?q=')[1].split('&btn')[0]
-    file = open(str(i) + '.html', 'wb')
-    time.sleep( 30 )
+    check = open(str(i) + '.html', 'r')
+    f = check.read()
+    print len(f)
+    time.sleep( 120 )
     i += 1
