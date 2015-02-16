@@ -82,6 +82,10 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+Amazon EC2 settings:
+http://www.nickpolet.com/blog/deploying-django-on-aws/1/
+
+
 
 ========================================
 
