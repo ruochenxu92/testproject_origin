@@ -1,7 +1,6 @@
 # __author__ = 'Xiaomin'
 #
 # from scrapy.spider import BaseSpider
-# from tutorial.items import ArticleItem, AuthorItem, InterestItem, PaperItem, WikiItem
 # from scrapy.utils.response import open_in_browser
 # import scrapy
 # import datetime

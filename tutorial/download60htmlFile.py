@@ -4,7 +4,7 @@ import time
 import os
 import json
 
-path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/items.json")
+path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/allthelinks3.json")
 json_data=open(path).read()
 data = json.loads(json_data)
 
@@ -27,8 +27,8 @@ for url in data:
     br.open(url['name'])
     st = br.response().read()
     print len(st)
-
     #filename = url['name'].split('?q=')[1].split('&btn')[0]
+    os.path
 
     file = open(str(i) + '.html', 'wb')
     file.write(st)
@@ -38,3 +38,4 @@ for url in data:
     print len(f)
     time.sleep( 120 )
     i += 1
+    break

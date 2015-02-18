@@ -9,7 +9,6 @@ def getListOfProfessors():
     listOfProfessors = f.read().split('\n')
     return listOfProfessors
 
-
  # self.file = open('items.json', 'wb')
  #        self.file.write('[')
 def getStartUrls():

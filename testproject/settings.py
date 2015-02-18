@@ -98,12 +98,18 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-
-
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     os.path.join(BASE_DIR,  'templates/task'),
 )
 
 
-
+#Xiaomin add following codes
+from sys import path
+c = os.getcwd()
+os.chdir(str(c)+'/tutorial')
+d = os.getcwd()
+path.append(d)
+os.chdir(c)
+d = os.getcwd()
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'tutorial.settings'

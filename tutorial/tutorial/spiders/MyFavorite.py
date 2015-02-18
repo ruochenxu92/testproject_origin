@@ -17,7 +17,7 @@ class DBSpider(Spider):
     Parse all interests
     '''
     def parse(self, response):
-        listOfInterest = response.xpath('//*/text()').extract()
+        listOfInterest = response.xpath('').extract()
         for interest in listOfInterest:
             # item = PageItem()
             # item['name'] = interest
