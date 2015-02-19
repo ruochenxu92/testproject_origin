@@ -6,7 +6,6 @@
 </head>
 <body>
     <h1>Task</h1>
-    {{ objects }}
     {% for task in object_list %}
         <li><a href="/descriptions/{{task.name }}">{{ task.id  }}_______{{ task.name }}</a></li>
     {% endfor %}

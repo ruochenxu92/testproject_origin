@@ -48,6 +48,7 @@
       <exported-key name="#FAKE_auth_user_groups_2" table="auth_user_groups" schema="" catalog="" columns="user_id"/>
       <exported-key name="#FAKE_auth_user_user_permissions_2" table="auth_user_user_permissions" schema="" catalog="" columns="user_id"/>
       <exported-key name="#FAKE_django_admin_log_1" table="django_admin_log" schema="" catalog="" columns="user_id"/>
+      <exported-key name="#FAKE_task_note_1" table="task_note" schema="" catalog="" columns="user_id"/>
     </table>
     <table name="auth_user_groups" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
@@ -111,6 +112,49 @@
       <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
     </table>
+    <table name="task_article" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR(40)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="likes" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="pub_date" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="task_author" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="institutions" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="authorUrl" sqlType="VARCHAR(200)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_author_1" columns="field_id" ref-table="task_field" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_task_author_interest_1" table="task_author_interest" schema="" catalog="" columns="author_id"/>
+      <exported-key name="#FAKE_task_paper_author_1" table="task_paper_author" schema="" catalog="" columns="author_id"/>
+      <index name="task_author_3aabf39f" unique="true" columns="field_id"/>
+    </table>
+    <table name="task_author_interest" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="interest_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="author_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_author_interest_1" columns="author_id" ref-table="task_author" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_task_author_interest_2" columns="interest_id" ref-table="task_interest" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="task_author_interest_4f331e2f" unique="true" columns="author_id"/>
+      <index name="task_author_interest_774f0487" unique="true" columns="interest_id"/>
+    </table>
+    <table name="task_cs499item" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="urllink" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="pdflink" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="authors" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="subjects" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="abstract" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR(200)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="likes" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
     <table name="task_description" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="content" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
@@ -119,11 +163,56 @@
       <foreign-key name="#FAKE_task_description_1" columns="taskName_id" ref-table="task_task" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <index name="task_description_eb715e18" unique="true" columns="taskName_id"/>
     </table>
-    <table name="task_task" schema="" catalog="" type="TABLE">
+    <table name="task_field" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="name" sqlType="VARCHAR(30)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
-      <exported-key name="#FAKE_task_description_1" table="task_description" schema="" catalog="" columns="taskName_id"/>
+      <exported-key name="#FAKE_task_author_1" table="task_author" schema="" catalog="" columns="field_id"/>
+      <exported-key name="#FAKE_task_interest_1" table="task_interest" schema="" catalog="" columns="field_id"/>
+    </table>
+    <table name="task_interest" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="field_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_interest_1" columns="field_id" ref-table="task_field" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_task_author_interest_2" table="task_author_interest" schema="" catalog="" columns="interest_id"/>
+      <index name="task_interest_3aabf39f" unique="true" columns="field_id"/>
+    </table>
+    <table name="task_note" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="pub_date" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR(200)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_note_1" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="task_note_fbfc09f1" unique="true" columns="user_id"/>
+    </table>
+    <table name="task_paper" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="pub_date" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="citedTimes" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="paperUrl" sqlType="VARCHAR(200)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_task_paper_author_2" table="task_paper_author" schema="" catalog="" columns="paper_id"/>
+    </table>
+    <table name="task_paper_author" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="paper_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="author_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_paper_author_1" columns="author_id" ref-table="task_author" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_task_paper_author_2" columns="paper_id" ref-table="task_paper" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="task_paper_author_4f331e2f" unique="true" columns="author_id"/>
+      <index name="task_paper_author_f197767f" unique="true" columns="paper_id"/>
+    </table>
+    <table name="task_person" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(32)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
     </table>
   </data-source>
 </component>

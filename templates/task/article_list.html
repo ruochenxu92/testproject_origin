@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../static/static-assets/static/js/ajax.js"></script>
+    <script src="../static/static-assets/static/js/jquery-2.0.0.min.js"></script>
+    <title></title>
+</head>
+<body>
+
+
+
+    <ul>
+        <li><a href="/all">Articles</a></li>
+        <li><a href="/create"> create article</a></li>
+
+    </ul>
+
+
+
+    <h1>Articles</h1>
+    {% for article in object_list %}
+        <li><h2><a href="../get/{{ article.id }}">{{ article.title }}</a></h2></li>
+    {% endfor %}
+
+
+<h3>Search</h3>
+{% csrf_token %}
+    <input type="text" id="search" name="search"/>
+    <ul id="search-results">
+        EEEEE
+
+    </ul>
+<button id = "search1">Search</button>
+
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+    $('#search1').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "/search/",
+            data: {
+                'search_text' : $('#search').val(),
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: searchSuccess,
+            dataType: 'html'
+        });
+
+    });
+});
+
+
+function searchSuccess(data, textStatus, jqXHR)
+{
+    $('#search-results').html(data);
+}
+</script>
+</body>
+</html>
