@@ -31,7 +31,10 @@ urlpatterns = patterns('',
     url(r'^all/$', views.ListArticles.as_view()),
     url(r'^create/$', 'task.views.create'),
 
-    url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
+    #url(r'^get/(?P<article_id>\d+)/$', 'task.views.article'),
+    url(r'^get/(?P<article_id>\d+)/$', 'task.views.cs499item'),
+
+    url(r'^send_email/$', 'task.views.send_email'),
 
     url(r'^like/(?P<article_id>\d+)/$', 'task.views.like_article'),
 )

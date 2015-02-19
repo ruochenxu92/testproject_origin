@@ -1,5 +1,9 @@
-{% if articles.count > 0 %} {% for article in articles %}
-{{ article.object.title }}
-{% endfor %} {% else %}
+{% if cs499items.count > 0 %}
+    {% for cs499item in cs499items %}
+         {{ cs499item.object.title }}
+    {% endfor %}
+{% else %}
 None to show!
 {% endif %}
+
+

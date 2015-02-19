@@ -20,7 +20,7 @@
 #         return self.get_model().objects.all()
 import datetime
 from haystack import indexes
-from task.models import Article
+from task.models import cs499Item
 
 
 # class NoteIndex(indexes.SearchIndex, indexes.Indexable):
@@ -36,14 +36,24 @@ from task.models import Article
 #         return self.get_model().objects.filter(pub_date__lte=datetime.datetime.now())
 
 
-class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
+# class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
+#     text = indexes.CharField(document=True, use_template=True)
+#     title = indexes.CharField(model_attr='title')
+#     body = indexes.CharField(model_attr='body')
+#
+#     def get_model(self):
+#         return Article
+#
+#     def index_queryset(self, using=None):
+#         return self.get_model().objects.all()
+
+class cs499itemIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     title = indexes.CharField(model_attr='title')
-    body = indexes.CharField(model_attr='body')
+    abstract = indexes.CharField(model_attr='abstract')
 
     def get_model(self):
-        return Article
+        return cs499Item
 
     def index_queryset(self, using=None):
         return self.get_model().objects.all()
-

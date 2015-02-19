@@ -61,10 +61,10 @@ def filteralpha(str):
 path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/uniquename.txt")
 urlfile=open(path, 'r')
 listOfUrl = urlfile.read().split('\n')
+print(len(listOfUrl))
 
 
-
-i = 0
+i = 2598
 from sys import path
 c = os.getcwd()
 os.chdir('/Users/Xiaomin/cs410hw2')
@@ -110,6 +110,8 @@ for url in listOfUrl:
         txt.write(''.join(visible_texts))
         txt.close()
     i += 1
+    time.sleep(1)
+
 
 
 
@@ -132,3 +134,6 @@ for url in listOfUrl:
 # ...
 # >>> visible_texts = filter(visible, texts)
 # >>> print visible_texts
+
+
+

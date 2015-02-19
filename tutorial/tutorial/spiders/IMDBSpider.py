@@ -48,11 +48,6 @@ class IMDBSpider(BaseSpider):
             wiki['value'] = str
             yield wiki
 
-
-
-
-
-
     # def parse_page2(self,response):
     #     #url = response.xpath('//*[@id="gsc_a_ta"]/a/text()').extract()[0]
     #     #author['institution'] = response.xpath('//*[@id="gsc_prf_i"]/div[3]/text()').extract()[0]

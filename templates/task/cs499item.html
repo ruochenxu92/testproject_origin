@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Title: {{ article.title }}</h1>
+    <h2>Authors: {{ article.authors }}</h2>
+    <h2>Subjects: {{ article.subjects }}</h2>
+    <h2>Date: {{ article.date }}</h2>
+    <p>Abstract: {{ article.abstract }}</p>
+    <a href='{{ article.pdflink }}'>See PDF</a><br>
+    <a href='{{ article.urllink }}'>See More Details</a>
+    <p>{{ article.likes }} Likes</p>
+    <p><a href="/like/{{ article.id }}">Like</a></p>
+
+
+<h3>Search</h3>
+{% csrf_token %}
+    <input type="text" id="search" name="search"/>
+    <ul id="search-results">
+    </ul>
+</body>
+</html>

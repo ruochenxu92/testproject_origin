@@ -20,34 +20,35 @@ class IMDBReviewSpider(Spider):
     hostname = 'http://www.imdb.com/'
     name = 'review'
     #allowed_domains = ['http://cs.illinois.edu']
-    start_urls = ['http://www.imdb.com/title/tt0204777/?ref_=nm_flmg_act_205']
+    start_urls = getUrls()
 
     def __init__(self):
         self.count = 0
 
     def parse(self, response):
-        reviews = ''
-        reviews = response.xpath('//*[@id="titleUserReviewsTeaser"]/div/span/div[2]/p/text()').extract()[0]
-        title = response.xpath('//title/text()').extract()[0]
-        print(title)
-        item = ReviewItem()
-        item['url'] = response.url
-        # t = lxml.html.parse(item['url'])
-        # print(type(t))
-        print(type(title))
-        title = title.encode("utf8")
-        item['title'] = title
-        item['review'] = reviews
-        item['filename'] = 'xxu46_'+ str(self.count) + '.txt'
+        try:
+            reviews = ''
+            reviews = response.xpath('//*[@id="titleUserReviewsTeaser"]/div/span/div[2]/p/text()').extract()[0]
+            title = response.xpath('//title/text()').extract()[0]
+            print(title)
+            item = ReviewItem()
+            item['url'] = response.url
+            # t = lxml.html.parse(item['url'])
+            # print(type(t))
+            print(type(title))
+            title = title.encode("utf8")
+            item['title'] = title
+            item['review'] = reviews
+            item['filename'] = 'xxu46_'+ str(self.count) + '.txt'
+            seeMore = response.xpath('//*[@id="quotes"]/a[last()]/@href').extract()[0]
+            prefix = item['url'].split('trivia')[0]
+            seeMore =prefix + seeMore
+            request = scrapy.Request(seeMore, callback=self.parseMovieDetails)
+            request.meta['item'] = item
+            yield request
+        except:
+            pass
         self.count += 1
-        seeMore = response.xpath('//*[@id="quotes"]/a[last()]/@href').extract()[0]
-        prefix = item['url'].split('trivia')[0]
-        seeMore =prefix + seeMore
-
-        print(seeMore)
-        request = scrapy.Request(seeMore, callback=self.parseMovieDetails)
-        request.meta['item'] = item
-        yield request
 
 
     def parseMovieDetails(self,response):

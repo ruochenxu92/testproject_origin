@@ -126,6 +126,41 @@ class Page(models.Model):
 
 
 
+class cs499Item(models.Model):
+    urllink = models.CharField(max_length=80,blank=True, null=True)
+    pdflink = models.CharField(max_length=80,blank=True, null=True)
+    title = models.CharField(max_length=80,null = True,blank=True)
+    authors = models.CharField(max_length=80,null = True,blank=True)
+    subjects = models.CharField(max_length=80,null=True, blank=True)
+    abstract = models.TextField()
+    date = models.DateTimeField(blank=True, null=True)# auto_now=False, auto_now_add=False
+    category = models.CharField(max_length=200, null = True,blank=True)
+    likes = models.IntegerField(default=0)
 
 
+    def __unicode__(self):
+        return smart_unicode(self.title)
 
+
+    def get_absolute_url(self):
+        return '/get/%i/' % self.id
+
+
+    class Meta:
+        ordering = ('date',)
+
+
+# import os
+# path = os.path.abspath('/Users/Xiaomin/testproject/tutorial/cs499.json')
+#
+# json_data = open(path)
+#
+# import json
+#
+# data = json.load(json_data)
+#
+#
+#
+# for cs499 in data:
+#      entry = cs499Item(urllink=cs499['urllink'],pdflink=cs499['pdflink'],title=cs499['title'],authors=cs499['authors'],subjects=cs499['subjects'],abstract=cs499['abstract'],date=cs499['date'],category=cs499['category'])
+#      entry.save()
