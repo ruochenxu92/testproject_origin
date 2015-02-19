@@ -4,25 +4,8 @@
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c88f70e8-68e4-492f-9997-1f2d9165ae9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/CS499Spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/task/cs499item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/search/indexes/task/cs499item_text.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/getAllUrlsCS499.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBReviewSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBReviewSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBSpider.py" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/task/ajax_search.html" afterPath="$PROJECT_DIR$/templates/task/ajax_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/download10000files.py" afterPath="$PROJECT_DIR$/tutorial/download10000files.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/models.py" afterPath="$PROJECT_DIR$/task/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/indexes/task/note_text.txt" afterPath="$PROJECT_DIR$/templates/indexes/task/note_text.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/search/search.html" afterPath="$PROJECT_DIR$/templates/search/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/search_indexes.py" afterPath="$PROJECT_DIR$/task/search_indexes.py" />
+    <list default="true" id="c88f70e8-68e4-492f-9997-1f2d9165ae9f" name="Default" comment="All works now, please use your own">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testproject/settings.py" afterPath="$PROJECT_DIR$/testproject/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testproject/urls.py" afterPath="$PROJECT_DIR$/testproject/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/views.py" afterPath="$PROJECT_DIR$/task/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testproject.iws" />
@@ -58,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/testproject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7915567" vertical-offset="0" max-vertical-offset="2085">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -754,7 +737,11 @@
       <created>1424243372506</created>
       <updated>1424243372506</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="All works now, finish project">
+      <created>1424316366586</created>
+      <updated>1424316366586</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -834,7 +821,8 @@
     <MESSAGE value="commit finish Interest" />
     <MESSAGE value="commit before integrate scrapy and django" />
     <MESSAGE value="finish working for hw2&#10;1. unicode convert into utf string by encoding(title)&#10;2. get all reviews use scrapy &#10;3. callback use yield request" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish working for hw2&#10;1. unicode convert into utf string by encoding(title)&#10;2. get all reviews use scrapy &#10;3. callback use yield request" />
+    <MESSAGE value="All works now, finish project" />
+    <option name="LAST_COMMIT_MESSAGE" value="All works now, finish project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1262,7 +1250,7 @@
     <entry file="file://$PROJECT_DIR$/testproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7915567" vertical-offset="0" max-vertical-offset="2085">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
