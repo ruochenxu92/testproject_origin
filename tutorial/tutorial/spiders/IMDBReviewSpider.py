@@ -11,7 +11,7 @@ import lxml.html
 
 
 def getUrls():
-    path = os.path.abspath('/Users/Xiaomin/testproject/tutorial/uniquename.txt')
+    path = os.path.abspath('/Users/Xiaomin/testproject/tutorial/url.txt')
     f = open(path, 'r')
     listOfUrls = f.read().split('\n')
     return listOfUrls

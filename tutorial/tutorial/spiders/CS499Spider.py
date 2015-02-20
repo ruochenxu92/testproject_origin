@@ -39,19 +39,14 @@ class CS499Spider(Spider):
     def parse(self, response):
         i = 1
 
-        print response.xpath('//*[@id="dlpage"]/dl/dd[1]/div/div[1]/text()').extract()[0]
+        # print response.xpath('//*[@id="dlpage"]/dl/dd[1]/div/div[1]/text()').extract()[0]
         prefix = 'http://arxiv.org'
 
         for sel in response.xpath('//*[@id="dlpage"]/dl[1]/dt'):
             item = cs499Item()
             item['urllink'] = prefix + sel.xpath('span/a[1]/@href').extract()[0]
             item['pdflink'] = prefix + sel.xpath('span/a[2]/@href').extract()[0]
-
-            date_str = str(datetime.datetime.now())
-            datetime_obj_naive = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
-            datetime_obj_central = timezone('US/Central').localize(datetime_obj_naive)
-            item['date'] =datetime_obj_central
-
+            item['date'] = str(datetime.datetime.now())
             item['category'] = response.xpath('//*[@id="dlpage"]/h1/text()').extract()[0]
             seeMore = item['urllink']
             request = scrapy.Request(seeMore, callback=self.parseMovieDetails)

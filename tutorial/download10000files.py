@@ -64,7 +64,7 @@ listOfUrl = urlfile.read().split('\n')
 print(len(listOfUrl))
 
 
-i = 2598
+i = 9659
 from sys import path
 c = os.getcwd()
 os.chdir('/Users/Xiaomin/cs410hw2')
@@ -110,7 +110,6 @@ for url in listOfUrl:
         txt.write(''.join(visible_texts))
         txt.close()
     i += 1
-    time.sleep(1)
 
 
 
