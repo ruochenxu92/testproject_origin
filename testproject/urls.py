@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from task import views
 import haystack
+from task.views import MySearchView
 
 urlpatterns = patterns('',
     #match list page with rule books, and will pass keyword args to views functions
@@ -16,6 +17,8 @@ urlpatterns = patterns('',
     #
     # url(r'^search/', include('haystack.urls')),
     (r'^search/', include('haystack.urls')),
+
+    url(r'^mysearchview/$', MySearchView(), name='search_view'),
 
     url(r'^accounts/register/$', 'task.views.register_user'),
     url(r'^accounts/register_success/$', 'task.views.register_success'),
