@@ -55,12 +55,12 @@ def filteralpha(str):
     return " ".join(str.split(' '))
 
 import json
-path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/FamilyAndLifeStyle.json")
+path = os.path.abspath("/Users/Xiaomin/testproject/tutorial/FamilyAndLifeStyle12000.json")
 json_data=open(path).read()
 data = json.loads(json_data)
 
 
-i = 10001
+i = 12000
 from sys import path
 c = os.getcwd()
 os.chdir('/Users/Xiaomin/cs410hw2backup')

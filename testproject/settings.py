@@ -46,6 +46,9 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
         'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
     },
+
+
+   
 }
 
 # Quick-start development settings - unsuitable for production
