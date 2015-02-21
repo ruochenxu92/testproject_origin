@@ -159,6 +159,10 @@ def create(request):
 
 
 
+
+
+
+
 def like_article(request, article_id):
     if article_id:
         a = cs499Item.objects.get(id=article_id)
@@ -166,14 +170,137 @@ def like_article(request, article_id):
         a.save()
     return HttpResponseRedirect('../../get/%s' % article_id)
 
+
+
+
+
+
+
+'''
+TODO make recommendations for all people base the requirements
+'''
 def getcs499Item():
     field = 'Information Theory'
     result = cs499Item.objects.filter(category__icontains=field)
     return result
 
+
+
+
+    # from haystack.views import SearchView
+    # sv = SearchView()
+    # sv.build_form('information')
+    # result = sv.get_results()
+    # print("results=",len(result))
+    # from django.test.client import RequestFactory
+    # from haystack.views import SearchView
+    # request = RequestFactory.get('/search/?q=information')
+
+
+    #
+    # from haystack.views import SearchView
+    # import urllib2
+    # url = '/search/?q=information'
+    # request = urllib2.Request(url)
+    # #request.add_header("Content-Type", "application/json") #
+    # sv = SearchView(request)
+    # sv.build_form()
+    # result = sv.get_results()
+    #
+    #
+    # # sv = SearchView(request)
+    # # sv.build_form()
+    # # result = sv.get_results()
+    # print("result=",len(result))
+    # return result
+
+def getRecommendation():
+    return ['xxu46@illinois.edu']
+
 def send_email(request):
         items = getcs499Item()
-        print (len(items))
+        subject = ''
+        messages =''
+        i = 1
+
+        for item in items:
+
+            paper = 'Here is the ' + str(i) + ' paper\n\n'
+            paper += 'This is link for detail information '+ str(item.urllink) + '\n'
+            paper += 'The pdf link is here '+str(item.pdflink)+'\n'
+            paper += 'The title:' + str(item.title) + '\n'
+            #safe_str = str(item.authors).encode('ascii', 'ignore')
+            #paper += 'The authors: ' +   str(item.authors) + '\n'
+            paper += 'The subject: ' + str(item.subjects) + '\n'
+            paper += 'The abstract:\n '+ str(item.abstract)+ '\n'
+            paper += 'The date: ' + str(item.date) + '\n\n\n\n\n\n'
+            messages += paper
+            subject = 'recommendation for recent paper from ' + str(item.category) + 'field'
+            i += 1
+        send_mail(subject, messages, settings.EMAIL_HOST_USER, getRecommendation, fail_silently=False)
+        #
+        # connection = SMTPConnection(username=auth_user, password=auth_password, fail_silently=fail_silently)
+        # email = EmailMessage(subject, message, from_email, recipient_list, connection=connection, encoding='utf8').send()
+        #
+
+        return render_to_response('register_success.html')
+
+
+
+
+
+
+
+
+def autoGenerateQueries():
+    pass
+
+def GetEmailList():
+    pass
+
+
+
+
+
+
+from datetime import date
+from haystack.views import SearchView
+from haystack.forms import ModelSearchForm, FacetedSearchForm
+from haystack.query import EmptySearchQuerySet
+class MySearchView(SearchView):
+    """My custom search view."""
+
+    # def get_queryset(self):
+    #     queryset = super(MySearchView, self).get_queryset()
+    #     # further filter queryset based on some set of criteria
+    #     return queryset.filter(pub_date__gte=date(2015, 1, 1))
+    #
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super(MySearchView, self).get_context_data(*args, **kwargs)
+    #     # do something
+    #     return context
+
+    # def basic_search(request, template='search/search.html', load_all=True, form_class=ModelSearchForm, searchqueryset=None, context_class=RequestContext, extra_context=None, results_per_page=None):
+    #     query = ''
+    #     results = EmptySearchQuerySet()
+    #     if request.GET.get('q'):
+    #         form = form_class(request.GET, searchqueryset=searchqueryset, load_all=load_all)
+    #         if form.is_valid():
+    #             query = form.cleaned_data['q']
+    #             results = form.search()
+    #     else:
+    #         form = form_class(searchqueryset=searchqueryset, load_all=load_all)
+
+
+    def get_results(self):
+        """
+        Fetches the results via the form.
+        Returns an empty list if there's no query to search with.
+        """
+        results =  self.form.search()
+        print("results",len(results))
+
+        items = getcs499Item()
         subject = ''
         messages =''
         i = 1
@@ -182,16 +309,24 @@ def send_email(request):
             paper += 'This is link for detail information '+ str(item.urllink) + '\n'
             paper += 'The pdf link is here '+str(item.pdflink)+'\n'
             paper += 'The title:' + str(item.title) + '\n'
-            paper += 'The authors: ' + str(item.authors) + '\n'
+            #safe_str = str(item.authors).encode('ascii', 'ignore')
+            #paper += 'The authors: ' +   str(item.authors) + '\n'
             paper += 'The subject: ' + str(item.subjects) + '\n'
             paper += 'The abstract:\n '+ str(item.abstract)+ '\n'
             paper += 'The date: ' + str(item.date) + '\n\n\n\n\n\n'
             messages += paper
             subject = 'recommendation for recent paper from ' + str(item.category) + 'field'
-        emailList = ['xxu46@illinois.edu']
-        send_mail(subject, messages, settings.EMAIL_HOST_USER,emailList,fail_silently=False)
-        i += 1
-        return render_to_response('register_success.html')
+            i += 1
+        send_mail(subject, messages, settings.EMAIL_HOST_USER,  ['xxu46@illinois.edu'], fail_silently=False)
+        #
+        # connection = SMTPConnection(username=auth_user, password=auth_password, fail_silently=fail_silently)
+        # email = EmailMessage(subject, message, from_email, recipient_list, connection=connection, encoding='utf8').send()
+        return results
+
+
+
+
+
 
 
 '''

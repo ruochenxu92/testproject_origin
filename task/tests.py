@@ -1,25 +1,25 @@
-from django.test import TestCase
-
-# Create your tests here.
-from django.test import TestCase
-from task.models import Description,Task
-from models import Article,Note
-import datetime
-class AnimalTestCase(TestCase):
-    def test_generate_Article(self):
-        article1 = Article(title='Amazon', body='Amazon is one the best company in the world')
-        article1.save()
-        article2 = Article(title='Facebook', body='Facebook is one the best company in the world')
-        article2.save()
-        article3 = Article(title='Dropbox', body='Dropbox is one the best company in the world')
-        article3.save()
+from django.utils import unittest
+from django.test.client import RequestFactory
+from haystack.views import SearchView
 
 
-    def test_generate_Note(self):
-        Note1 = Note(title="Amazon", body="Amazon is great", pub_date=datetime.now())
-        Note1.save()
+class SimpleTest(unittest.TestCase):
+    def setUp(self):
+        # Every test needs access to the request factory.
+        self.factory = RequestFactory()
+
+    def test_details(self):
+        # Create an instance of a GET request.
 
 
-
-
-
+        from django.test.client import RequestFactory
+        from haystack.views import SearchView
+        import urllib2
+        url = '/search/?q=information'
+        request = urllib2.Request(url)
+        #request.add_header("Content-Type", "application/json") #
+        sv = SearchView(request)
+        sv.build_form()
+        results = sv.get_results()
+        # Test my_view() as if it were deployed at /customer/details
+        self.assertEqual(len(results), 35)
