@@ -165,3 +165,46 @@ class cs499Item(models.Model):
 # for cs499 in data:
 #      entry = cs499Item(urllink=cs499['urllink'],pdflink=cs499['pdflink'],title=cs499['title'],authors=cs499['authors'],subjects=cs499['subjects'],abstract=cs499['abstract'],date=cs499['date'],category=cs499['category'])
 #      entry.save()
+
+
+from django.db import models
+
+
+JOB_TYPES = (
+    ('pt', 'Part Time'),
+    ('ft', 'Full Time'),
+    ('ct', 'Contract')
+)
+
+class Company(models.Model):
+    name = models.CharField(max_length=64)
+    address = models.TextField(blank=True, null=True)
+    contact_email = models.EmailField()
+
+    def __unicode__(self):
+        return self.name
+
+class Location(models.Model):
+    city = models.CharField(max_length=64)
+    # state = us_models.USStateField()
+
+    def __unicode__(self):
+        return "%s, %s" % (self.city, self.state)
+
+class Job(models.Model):
+    name = models.CharField(max_length=64)
+    description = models.TextField()
+    salary = models.CharField(max_length=64, blank=True, null=True)
+    type = models.CharField(max_length=2, choices=JOB_TYPES)
+    company = models.ForeignKey(Company, related_name='jobs')
+    location = models.ForeignKey(Location, related_name='location_jobs')
+    contact_email = models.EmailField(blank=True, null=True)
+    added_at = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
+
+    def get_contact_email(self):
+        if self.contact_email:
+            return self.contact_email
+        return self.company.contact_email

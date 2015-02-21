@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c88f70e8-68e4-492f-9997-1f2d9165ae9f" name="Default" comment="">
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/models.py" afterPath="$PROJECT_DIR$/task/models.py" />
+>>>>>>> backup
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testproject.iws" />
@@ -43,6 +45,7 @@
             <state vertical-scroll-proportion="0.25745258" vertical-offset="2125" max-vertical-offset="2520">
               <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding />
+>>>>>>> backup
             </state>
           </provider>
         </entry>
@@ -116,6 +119,7 @@
         <option value="$PROJECT_DIR$/testproject/settings.py" />
         <option value="dbtable:/bc711935/bad8ca4e-88dc-4900-8eb0-34f29664068b/..task_cs499item" />
         <option value="$PROJECT_DIR$/task/models.py" />
+>>>>>>> backup
       </list>
     </option>
   </component>
@@ -149,6 +153,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,20 +182,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tutorial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="testproject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -206,6 +197,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testproject" />
+>>>>>>> backup
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+>>>>>>> backup
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -224,6 +245,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="search" />
+>>>>>>> backup
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,6 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+>>>>>>> backup
               <option name="myItemId" value="task" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -291,7 +314,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,9 +537,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -539,6 +558,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -727,6 +749,7 @@
       <updated>1424540528074</updated>
     </task>
     <option name="localTasksCounter" value="29" />
+>>>>>>> backup
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -751,11 +774,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6203966" sideWeight="0.49919224" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41926345" sideWeight="0.78836834" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24595469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> backup
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34801137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3721591" sideWeight="0.21163167" order="5" side_tool="false" content_ui="tabs" />
@@ -765,6 +789,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22411004" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> backup
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2911932" sideWeight="0.49919224" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -795,6 +820,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2911932" sideWeight="0.49919224" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23816794" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+>>>>>>> backup
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -835,6 +861,7 @@
     <MESSAGE value="fail install solr because did not setup schema" />
     <MESSAGE value="successfully setup solr&#10;1. download jar&#10;2. Django: change settings to solr engine&#10;3. ./manage.py solr_schema to conf/schema.xml&#10;4. restart solr&#10;5. search" />
     <option name="LAST_COMMIT_MESSAGE" value="successfully setup solr&#10;1. download jar&#10;2. Django: change settings to solr engine&#10;3. ./manage.py solr_schema to conf/schema.xml&#10;4. restart solr&#10;5. search" />
+>>>>>>> backup
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -863,62 +890,66 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="975">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/db.log">
+    <entry file="file://$PROJECT_DIR$/testproject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6752412" vertical-offset="1260" max-vertical-offset="3435">
           <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="99" selection-end-column="27" />
+>>>>>>> backup
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/GroupSpider.py">
+    <entry file="file://$PROJECT_DIR$/templates/search/indexes/task/cs499item_text.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7366864" vertical-offset="231" max-vertical-offset="930">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBSpider.py">
+    <entry file="file://$PROJECT_DIR$/task/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1110">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/cs499.json">
+    <entry file="file://$PROJECT_DIR$/templates/task/article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8125" vertical-offset="195" max-vertical-offset="675">
           <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/cs499allfiles.json">
+    <entry file="file://$PROJECT_DIR$/tutorial/uniquename.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6017131" vertical-offset="748" max-vertical-offset="1215">
+        <state vertical-scroll-proportion="70.19231" vertical-offset="1825" max-vertical-offset="2475">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/getAllUrlsCS499.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/url.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="495">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/url2.txt">
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/IMDBReviewSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3840">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/items.py">
+    <entry file="file://$PROJECT_DIR$/DiscussionTemplate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71092075" vertical-offset="793" max-vertical-offset="1260">
           <caret line="75" column="15" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="15" />
@@ -937,79 +968,98 @@
         <state vertical-scroll-proportion="0.084269665" vertical-offset="0" max-vertical-offset="356">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
+>>>>>>> backup
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search/indexes/task/article_text.txt">
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/CS499Spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="17" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/task/article_list.html">
+    <entry file="file://$PROJECT_DIR$/tutorial/download60htmlFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="24.291666" vertical-offset="583" max-vertical-offset="1095">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/task/cs499item.html">
+    <entry file="file://$PROJECT_DIR$/tutorial/family.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7680723" vertical-offset="0" max-vertical-offset="450">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+>>>>>>> backup
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/haystack/views.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/xxu46_0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65597665" vertical-offset="0" max-vertical-offset="3465">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+>>>>>>> backup
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/src/django-haystack/haystack/urls.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/family.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46348315" vertical-offset="0" max-vertical-offset="356">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testproject/urls.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/xxu46_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5898876" vertical-offset="0" max-vertical-offset="660">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.49382716" vertical-offset="0" max-vertical-offset="243">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/FamilyAndLifeStyle13000.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042134833" vertical-offset="0" max-vertical-offset="356">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+>>>>>>> backup
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/FamilyAndLifeStyle.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.748018" vertical-offset="0" max-vertical-offset="15090">
+          <caret line="999" column="67" selection-start-line="999" selection-start-column="67" selection-end-line="999" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search/indexes/task/cs499item_text.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042134833" vertical-offset="0" max-vertical-offset="356">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.844262" vertical-offset="285" max-vertical-offset="3120">
-          <caret line="186" column="59" selection-start-line="186" selection-start-column="59" selection-end-line="186" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#47#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/task/article.html">
+    <entry file="file://$PROJECT_DIR$/tutorial/23.lgo">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4225352" vertical-offset="75" max-vertical-offset="525">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+>>>>>>> backup
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/uniquename.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="70.19231" vertical-offset="1825" max-vertical-offset="2475">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
@@ -1055,11 +1105,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8185484" vertical-offset="149" max-vertical-offset="645">
           <caret line="37" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="58" />
+>>>>>>> backup
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/family.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1079,20 +1133,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.666667" vertical-offset="180" max-vertical-offset="1455">
           <caret line="33" column="4" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="4" />
+>>>>>>> backup
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/tutorial/download10000files.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2149533" vertical-offset="0" max-vertical-offset="1650">
           <caret line="62" column="9" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="9" />
+>>>>>>> backup
           <folding />
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22566372" vertical-offset="642" max-vertical-offset="1320">
@@ -1110,6 +1165,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+>>>>>>> backup
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
@@ -1117,15 +1173,18 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.82300884" vertical-offset="1137" max-vertical-offset="1860">
           <caret line="113" column="15" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="15" />
+>>>>>>> backup
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
+    <entry file="file://$PROJECT_DIR$/testproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+
         <state vertical-scroll-proportion="0.41353384" vertical-offset="100" max-vertical-offset="765">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
@@ -1151,12 +1210,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5392671" vertical-offset="267" max-vertical-offset="945">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+>>>>>>> backup
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/CS499Spider.py">
+    <entry file="file://$PROJECT_DIR$/task/search_indexes.py">
       <provider selected="true" editor-type-id="text-editor">
+
         <state vertical-scroll-proportion="-0.17801048" vertical-offset="668" max-vertical-offset="1050">
           <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
           <folding />
@@ -1178,6 +1239,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25745258" vertical-offset="2125" max-vertical-offset="2520">
           <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+>>>>>>> backup
           <folding />
         </state>
       </provider>

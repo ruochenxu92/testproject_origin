@@ -46,7 +46,7 @@ class CS499Spider(Spider):
             item = cs499Item()
             item['urllink'] = prefix + sel.xpath('span/a[1]/@href').extract()[0]
             item['pdflink'] = prefix + sel.xpath('span/a[2]/@href').extract()[0]
-            item['date'] = str(datetime.datetime.now())
+            item['date'] = str(datetime.datetime.now())[:-10]
             item['category'] = response.xpath('//*[@id="dlpage"]/h1/text()').extract()[0]
             seeMore = item['urllink']
             request = scrapy.Request(seeMore, callback=self.parseMovieDetails)
