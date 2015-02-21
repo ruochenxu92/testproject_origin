@@ -41,6 +41,7 @@ STATICFILES_FINDERS = (
 
 
 import os
+
 HAYSTACK_CONNECTIONS = {
     # 'default': {
     #     'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
@@ -54,6 +55,16 @@ HAYSTACK_CONNECTIONS = {
 
 
 }
+
+
+# HAYSTACK_CONNECTIONS = {
+#
+#
+#     'default': {
+#         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+#         'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+#     },
+# }
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/

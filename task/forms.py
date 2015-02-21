@@ -13,6 +13,7 @@ class ContactForm(forms.Form):
         pass
 
 
+
 class MyRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
