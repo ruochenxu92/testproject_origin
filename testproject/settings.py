@@ -17,6 +17,7 @@ EMAIL_HOST_PASSWORD = 'adfsdkljfdlk'
 
 
 
+
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 DEFAULT_TO_EMAIL = 'xxu46@illinois.edu'
 
