@@ -4,15 +4,13 @@ from scrapy.spider import Spider
 from scrapy.utils.response import open_in_browser
 import scrapy
 import os
-from tutorial.items import cs499Item
-import lxml.html
+from superqq.items import PaperItem
 import datetime
 import json
-from pytz import timezone
 
 
 def getUrls():
-    path = os.path.abspath('/Users/Xiaomin/testproject/tutorial/cs499.json')
+    path = os.path.abspath('/Users/Xiaomin/testproject/superqq/cs499.json')
     jf = open(path)
     data = json.load(jf)
     urls = []
@@ -29,13 +27,6 @@ class CS499Spider(Spider):
     def __init__(self):
         self.count = 0
 
-# //*[@id="dlpage"]/dl[1]/   dd[1]/div/div[1]
-# //*[@id="dlpage"]/dl[1]/   dd[2]/div/div[1]
-# //*[@id="dlpage"]/dl[1]/   dd[3]/div/div[1]
-
-#//*[@id="dlpage"]/dl[1]/dd[1]/div[1]/div[1]
-
-    #//*[@id="dlpage"]/dl[1]/dd[1]/div[1]/div[1]/text()
     def parse(self, response):
         i = 1
 
@@ -43,7 +34,7 @@ class CS499Spider(Spider):
         prefix = 'http://arxiv.org'
 
         for sel in response.xpath('//*[@id="dlpage"]/dl[1]/dt'):
-            item = cs499Item()
+            item = PaperItem()
             item['urllink'] = prefix + sel.xpath('span/a[1]/@href').extract()[0]
             item['pdflink'] = prefix + sel.xpath('span/a[2]/@href').extract()[0]
             item['date'] = str(datetime.datetime.now())
@@ -66,7 +57,6 @@ class CS499Spider(Spider):
         abstract = response.xpath('//*[@id="abs"]/div[2]/blockquote').extract()[0]
         item['abstract'] = abstract[78:-13] #delete the tag part
         return item
-
 
 
 

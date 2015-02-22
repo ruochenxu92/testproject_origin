@@ -13,7 +13,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ec2xxu@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'adfsdkljfdlk'
+
 
 
 
@@ -24,7 +25,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 PROJECT_DIRECTORY = os.getcwd()
 
 STATIC_URL = '/static/'
@@ -113,7 +113,6 @@ DATABASES = {
     }
 }
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -131,9 +130,9 @@ TEMPLATE_DIRS = (
 #Xiaomin add following codes
 from sys import path
 c = os.getcwd()
-os.chdir(str(c)+'/tutorial')
+os.chdir(str(c)+'/superqq')
 d = os.getcwd()
 path.append(d)
 os.chdir(c)
 d = os.getcwd()
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'tutorial.settings'
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'sup.settings'
