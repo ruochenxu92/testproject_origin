@@ -142,6 +142,14 @@
       <index name="task_author_interest_4f331e2f" unique="true" columns="author_id"/>
       <index name="task_author_interest_774f0487" unique="true" columns="interest_id"/>
     </table>
+    <table name="task_company" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(64)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="address" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="contact_email" sqlType="VARCHAR(75)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_task_job_2" table="task_job" schema="" catalog="" columns="company_id"/>
+    </table>
     <table name="task_cs499item" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="urllink" sqlType="VARCHAR(80)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
@@ -178,6 +186,28 @@
       <foreign-key name="#FAKE_task_interest_1" columns="field_id" ref-table="task_field" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <exported-key name="#FAKE_task_author_interest_2" table="task_author_interest" schema="" catalog="" columns="interest_id"/>
       <index name="task_interest_3aabf39f" unique="true" columns="field_id"/>
+    </table>
+    <table name="task_job" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(64)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="salary" sqlType="VARCHAR(64)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR(2)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="contact_email" sqlType="VARCHAR(75)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="added_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="company_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="location_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_task_job_1" columns="location_id" ref-table="task_location" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_task_job_2" columns="company_id" ref-table="task_company" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="task_job_e274a5da" unique="true" columns="location_id"/>
+      <index name="task_job_447d3092" unique="true" columns="company_id"/>
+    </table>
+    <table name="task_location" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="city" sqlType="VARCHAR(64)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_task_job_1" table="task_job" schema="" catalog="" columns="location_id"/>
     </table>
     <table name="task_note" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
