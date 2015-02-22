@@ -13,7 +13,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ec2xxu@gmail.com'
-EMAIL_HOST_PASSWORD = 'Jiahui46'
+EMAIL_HOST_PASSWORD = 'adfsdkljfdlk'
 
 
 
@@ -134,4 +134,4 @@ d = os.getcwd()
 path.append(d)
 os.chdir(c)
 d = os.getcwd()
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'superqq.settings'
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'sup.settings'
